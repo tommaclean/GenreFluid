@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   before_action :authorized?
 
   def find_dj
-    # session[:dj_id] = nil      
+    # session[:dj_id] = nil
     @dj_id = session[:dj_id]
     @logged_in = !!@dj_id
     if @logged_in
@@ -23,7 +23,7 @@ class ApplicationController < ActionController::Base
 
   def welcome
     # find_dj
-    @liked_playlists = @dj.liked_playlists
-    @playlists = @dj.playlists
+    @liked_playlists = @current_dj.liked_playlists
+    @playlists = @current_dj.playlists
   end
 end

@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :playlist_songs, only: [:show, :create, :destroy]
   resources :songs
   resources :playlists do
-    resources :likes, only: [:show, :create, :destroy]
+    resources :likes, only: [:show, :create, :edit, :destroy]
   end
   resources :djs, only: [:show, :new, :create, :edit, :update, :destroy]
 
