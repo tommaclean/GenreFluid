@@ -22,3 +22,6 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+![app runthrough gif](https://gfycat.com/greatfrayedfennecfox)
