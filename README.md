@@ -24,4 +24,4 @@ Things you may want to cover:
 * ...
 
 
-![app runthrough gif](https://gfycat.com/greatfrayedfennecfox)
+![app runthrough gif](https://giant.gfycat.com/GreatFrayedFennecfox.gif)
