@@ -1,6 +1,7 @@
 class DjsController < ApplicationController
   skip_before_action :authorized?, only: [:new, :create]
   before_action :find_page_dj, only: [:show, :edit, :update, :destroy]
+  skip_before_action :find_dj, only: [:new, :create]
 
   def new
     @dj = Dj.new

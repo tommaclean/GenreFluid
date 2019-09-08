@@ -5,7 +5,9 @@ class PlaylistSongsController < ApplicationController
   end
 
   def create
-    #code
+    @playlist_song = PlaylistSong.create(song_id: params[:playlist_song][:song_id], playlist_id: @current_dj.playlists.last.id)
+
+    redirect_to @current_dj.playlists.last
   end
 
   def destroy

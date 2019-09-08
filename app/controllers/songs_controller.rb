@@ -6,15 +6,23 @@ class SongsController < ApplicationController
       # Track search results
       track_search = RSpotify::Track.search(params[:search_term])
       @track_results = track_search.map.take(4)  { |track| {name: track.name, artists: track.artists.map{|a| a.name}, preview: track.preview_url, bpm: track.artists.map {|a| a.audio_features.tempo} }}
+
+      @track_results.each do |track|
+        Song.create(title: track.name, artist: track.artists.first.name) unless Song.find_by(title: track.name, artist: track.artists.first.name) != nil
+      end
+
+      @songs = Song.all[Song.all.size-4, 4]
+      @playlist_song = PlaylistSong.new
+
       # Artist search results
       artist_search = RSpotify::Artist.search(params[:search_term])
       @artist_results = artist_search.map.take(4)  { |artist| artist.name }
       # Albums search resultss
       album_search = RSpotify::Album.search(params[:search_term])
-      @album_results = album_search.map.take(4)  { |album| {title: album.name, artist: album.artists.first.name}}
+      @album_results = album_search.map { |album| {title: album.name, artist: album.artists.first.name}}.take(4)
       # Playlist search results
       playlists_search = RSpotify::Playlist.search(params[:search_term])
-      @spotify_playlist_results = playlists_search.map.take(4) { |playlist| {name: playlist.name, author: playlist.owner.display_name}}
+      @spotify_playlist_results = playlists_search.map { |playlist| {name: playlist.name, author: playlist.owner.display_name}}.take(4)
       # Local playlists
       @playlist_results = Playlist.where('name LIKE ?', "%#{params[:search_term]}%")
       # User search results

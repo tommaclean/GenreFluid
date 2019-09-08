@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
   skip_before_action :authorized?, only: [:new, :create]
+  skip_before_action :find_dj, only: [:new, :create]
 
   def new
     @dj = Dj.new

@@ -1,4 +1,4 @@
-<h1>Song Serach Results:</h1>
+<h1>Song Search Results:</h1>
 
 <h3>Tracks</h3>
 <% if @track_results.empty? %>
@@ -17,6 +17,18 @@
   </ol>
   <br>
 <% end %>
+
+<br>
+
+<h3>Add A Song</h3>
+
+<%= form_for @playlist_song, method: :post do |f| %>
+<%= f.label :song_id, "" %>
+<%= f.collection_select :song_id, @songs, :id, :title, class: "form-control" %> <br>
+<%= f.submit "Add Song to Playlist", class: "btn btn-outline-danger"%>
+<% end %>
+
+<br>
 
 
 <h3>Artists</h3>
@@ -40,7 +52,7 @@
 <% else %>
 <ol>
   <% @album_results.each do |album| %>
-<li><%= album.name %> - <%= album.artists.first.name %></li>
+<li><%= album[:title] %> - <%= album[:artist] %></li>
 <% end %>
 <br>
 </ol>
@@ -68,7 +80,7 @@
   <% else %>
 <ol>
 <% @spotify_playlist_results.each do |playlist| %>
-<li><%= playlist.name %> - <i>created by: <%= playlist.owner.display_name %></i></li>
+<li><%= playlist[:name] %> - <i>created by: <%= playlist[:author] %></i></li>
 <% end %>
 </ol>
 <br>
