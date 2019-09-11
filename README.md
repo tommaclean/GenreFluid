@@ -29,15 +29,13 @@ If there are problems, start by checking that the data has seeded by running `ra
 
 * [Ruby on Rails](https://github.com/rails/rails) - Backend API
 * [ActiveModel Serializers](https://github.com/rails-api/active_model_serializers) - JSON:API Seralizers for Ruby Objects
-* [JWT for Ruby](https://github.com/jwt/ruby-jwt) - JSON Web Token for Login/Signup encryption
+* [JWT Ruby](https://github.com/jwt/ruby-jwt) - JSON Web Token for Login/Signup encryption
 * [Bootstrap](https://github.com/twbs/bootstrap) - HTML, CSS, Javascript framework
 
 ## 🛒 Future Tasks
 
 - [x] Bootstrap forms
 - [ ] Add social media sharing features 
-- [ ] Make validation errors show up on frontend
-- [ ] Add a dropdown for playlists
 
 ## 🦴Authors
 
