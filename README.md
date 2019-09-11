@@ -13,13 +13,18 @@ rails db:migrate && rails db:seed
 rails s
 
 ```
-Copy the resulting url listed as `Listening on [url]` (often it will be localhost:3000) and paste the url into your browser.
+Copy the resulting url listed as `Listening on [url]` (often it will be localhost:3000), paste the url into your browser & voila.
 If there are problems, start by checking that the data has seeded by running `rails c`, then `User.all` 
       
       
 ## Usage
 
-
+* A user can login or sign up
+* If signing up, the user can update their default profile info
+* On a user's profile page is their DJ info, created playlists and liked playlists
+* Here, a user can create a new playlist
+* A search bar on the navigation bar allows the user to search for songs, artists, albums, spotify playlists, and other users on the app
+* Entering a search brings the user to a page with the results listed out and the options to add songs to the user's playlist or see other users' profile
       
 ## Built With
 
@@ -33,12 +38,12 @@ If there are problems, start by checking that the data has seeded by running `ra
 - [x] Bootstrap forms
 - [ ] Add social media sharing features 
 - [ ] Make validation errors show up on frontend
-- [ ] Allow user to choose which playlist to add song to
+- [ ] Add a dropdown for playlists
 
 ## Authors
 
-[Tess Neau](https://github.com/tessneau) - tessneau@gmail.com
-[Tom MacLean](https://github.com/tommaclean)
+* [Tess Neau](https://github.com/tessneau) - tessneau@gmail.com
+* [Tom MacLean](https://github.com/tommaclean)
 
 ## Acknowledgements
 
