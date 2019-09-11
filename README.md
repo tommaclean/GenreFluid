@@ -11,7 +11,6 @@ A social music app to search through the Spotify library, create the playlists t
 bundle install
 rails db:migrate && rails db:seed
 rails s
-
 ```
 Copy the resulting url listed as `Listening on [url]` (often it will be localhost:3000), paste the url into your browser & voila.
 If there are problems, start by checking that the data has seeded by running `rails c`, then `User.all` 
