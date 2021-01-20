@@ -2,9 +2,6 @@
 
 A social music app to search through the Spotify library, create the playlists to accompany all your moods and share those with other users 
 
-![app runthrough gif](https://giant.gfycat.com/GreatFrayedFennecfox.gif)
-
-
 ## 🧩Installation
 
 ```
