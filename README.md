@@ -39,8 +39,9 @@ If there are problems, start by checking that the data has seeded by running `ra
 
 ## 🦴Authors
 
+* [Tom MacLean](https://github.com/tommaclean) - tom.j.maclean@gmail.com
 * [Tess Neau](https://github.com/tessneau) - tessneau@gmail.com
-* [Tom MacLean](https://github.com/tommaclean)
+
 
 ## 🙏Acknowledgements
 
