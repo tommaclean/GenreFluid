@@ -29,11 +29,6 @@ If there are problems, start by checking that the data has seeded by running `ra
 * [JWT Ruby](https://github.com/jwt/ruby-jwt) - JSON Web Token for Login/Signup encryption
 * [Bootstrap](https://github.com/twbs/bootstrap) - HTML, CSS, Javascript framework
 
-## 🛒 Future Tasks
-
-- [x] Bootstrap forms
-- [ ] Add social media sharing features 
-
 ## 🦴Authors
 
 * [Tom MacLean](https://github.com/tommaclean) - tom.j.maclean@gmail.com
