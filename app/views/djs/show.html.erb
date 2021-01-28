@@ -40,6 +40,12 @@
           <li><%= link_to playlist.name, playlist %></li>
         <% end %>
       </ol>
+      <h2>Public Playlists</h2>
+      <ol>
+        <% Playlist.all.each  do |playlist| %>
+          <li><%= link_to playlist.name, playlist %>: <i><%= playlist.description %></i></li>
+        <% end %>
+      </ol>
     </div>
 
     <% if @current_dj.id == @dj.id %>
